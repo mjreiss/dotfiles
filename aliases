@@ -1,0 +1,25 @@
+# Unix
+alias ll="ls -al"
+alias ln="ln -v"
+alias mkdir="mkdir -p"
+alias e="$EDITOR"
+alias v="$VISUAL"
+
+# Bundler
+alias b="bundle"
+
+# Rails
+alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+alias redb="bin/rake db:drop db:create db:migrate db:test:prepare"
+alias s="rails s"
+alias S="heroku local"
+alias dev="rails c"
+
+# Puma
+alias pkp="pkill puma"
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
+
+# Include custom aliases
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local
